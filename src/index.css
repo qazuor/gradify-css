@@ -209,3 +209,12 @@
     oklch(0.14 0.015 250) 100%
   );
 }
+
+/* Organic/Asymmetric border radius */
+.rounded-organic {
+  border-radius: 1.5rem 0.75rem 1.5rem 0.75rem;
+}
+
+.rounded-organic-alt {
+  border-radius: 0.75rem 1.5rem 0.75rem 1.5rem;
+}

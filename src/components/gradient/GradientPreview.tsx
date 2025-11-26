@@ -8,7 +8,7 @@ export function GradientPreview() {
   const css = useGradientStore((state) => state.css);
 
   return (
-    <Card className="h-full">
+    <Card className="h-full rounded-organic">
       <CardHeader className="pb-3">
         <CardTitle className="text-lg">{t("gradient.preview")}</CardTitle>
       </CardHeader>

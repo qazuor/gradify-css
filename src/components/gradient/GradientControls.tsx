@@ -20,7 +20,7 @@ export function GradientControls() {
   const randomize = useGradientStore((state) => state.randomize);
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden rounded-organic-alt">
       <CardHeader className="pb-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <CardTitle className="text-lg">{t("gradient.type")}</CardTitle>

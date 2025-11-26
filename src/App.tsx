@@ -54,13 +54,9 @@ function App() {
 
         <TabsContents>
           <TabsContent value="creator">
-            <div className="grid gap-6 lg:grid-cols-2">
-              <div>
-                <GradientPreview />
-              </div>
-              <div>
-                <GradientControls />
-              </div>
+            <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+              <GradientPreview />
+              <GradientControls />
             </div>
           </TabsContent>
 
