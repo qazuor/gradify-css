@@ -5,6 +5,8 @@ type IconProps = SVGProps<SVGSVGElement>;
 export function GithubIcon(props: IconProps) {
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
       fill="currentColor"
@@ -18,6 +20,8 @@ export function GithubIcon(props: IconProps) {
 export function LinkedinIcon(props: IconProps) {
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
       fill="currentColor"
@@ -31,6 +35,8 @@ export function LinkedinIcon(props: IconProps) {
 export function BuyMeACoffeeIcon(props: IconProps) {
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
       fill="currentColor"
@@ -44,6 +50,8 @@ export function BuyMeACoffeeIcon(props: IconProps) {
 export function FiverrIcon(props: IconProps) {
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
       fill="currentColor"
@@ -57,6 +65,8 @@ export function FiverrIcon(props: IconProps) {
 export function UpworkIcon(props: IconProps) {
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
       fill="currentColor"

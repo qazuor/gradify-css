@@ -120,7 +120,7 @@ function composeEventHandlers<E extends React.SyntheticEvent<unknown>>(
   };
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// biome-ignore lint/suspicious/noExplicitAny: required for dynamic props merging
 type AnyProps = Record<string, any>;
 
 function AnimateIcon({
@@ -204,12 +204,12 @@ function AnimateIcon({
     activeRef.current = localAnimate;
   }, [localAnimate]);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: intentionally run only on animate change
   React.useEffect(() => {
     if (animate === undefined) return;
     setCurrentAnimation(typeof animate === 'string' ? animate : animation);
     if (animate) startAnimation(animate as TriggerProp);
     else stopAnimation();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [animate]);
 
   React.useEffect(() => {
@@ -244,6 +244,7 @@ function AnimateIcon({
     else stopAnimation();
   }, [isInView, animateOnView, startAnimation, stopAnimation]);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: complex animation logic with intentional deps
   React.useEffect(() => {
     const gen = ++runGenRef.current;
     cancelledRef.current = false;
@@ -368,8 +369,7 @@ function AnimateIcon({
         loopDelayRef.current = null;
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [localAnimate, controls]);
+  }, [localAnimate]);
 
   const childProps = (
     React.isValidElement(children) ? (children as React.ReactElement).props : {}

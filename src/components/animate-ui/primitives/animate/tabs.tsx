@@ -263,7 +263,7 @@ function TabsContents({
       ro.disconnect();
       roRef.current = null;
     };
-  }, [activeIndex, childrenArray.length, measure]);
+  }, [activeIndex, measure]);
 
   React.useLayoutEffect(() => {
     if (height === 0 && activeIndex >= 0) {
@@ -283,11 +283,12 @@ function TabsContents({
     >
       <motion.div
         className="flex -mx-2"
-        animate={{ x: activeIndex * -100 + '%' }}
+        animate={{ x: `${activeIndex * -100}%` }}
         transition={transition}
       >
         {childrenArray.map((child, index) => (
           <div
+            // biome-ignore lint/suspicious/noArrayIndexKey: tabs content order is stable
             key={index}
             ref={(el) => {
               itemRefs.current[index] = el;

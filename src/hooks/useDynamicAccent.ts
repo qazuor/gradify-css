@@ -21,7 +21,7 @@ function rgbToOklch(r: number, g: number, b: number): { l: number; c: number; h:
 
   // Convert to linear RGB
   const toLinear = (c: number) =>
-    c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
 
   const rLin = toLinear(rNorm);
   const gLin = toLinear(gNorm);
