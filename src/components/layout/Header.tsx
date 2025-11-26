@@ -11,7 +11,7 @@ export function Header() {
   const AppIcon = siteConfig.app.icon;
 
   return (
-    <header className="bg-background border-b">
+    <header className="header-gradient border-b">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
