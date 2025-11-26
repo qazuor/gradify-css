@@ -8,15 +8,6 @@
     "history": "History",
     "inspiration": "Inspiration"
   },
-  "theme": {
-    "toggle": "Toggle theme",
-    "light": "Light",
-    "dark": "Dark",
-    "system": "System"
-  },
-  "language": {
-    "select": "Select language"
-  },
   "gradient": {
     "type": "Gradient Type",
     "linear": "Linear",
@@ -35,8 +26,6 @@
   },
   "actions": {
     "copy": "Copy CSS",
-    "copied": "Copied!",
-    "reset": "Reset",
     "randomize": "Randomize"
   },
   "history": {
