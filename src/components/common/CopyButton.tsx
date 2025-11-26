@@ -1,4 +1,6 @@
-import { Check, Copy } from "lucide-react";
+import { CheckCheck } from "@/components/animate-ui/icons/check-check";
+import { Clipboard } from "@/components/animate-ui/icons/clipboard";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -25,19 +27,21 @@ export function CopyButton({ text, onCopy }: CopyButtonProps) {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button onClick={handleCopy} variant="default" className="w-full">
-            {copied ? (
-              <>
-                <Check className="mr-2 h-4 w-4" />
-                {t("actions.copied")}
-              </>
-            ) : (
-              <>
-                <Copy className="mr-2 h-4 w-4" />
-                {t("actions.copy")}
-              </>
-            )}
-          </Button>
+          <AnimateIcon animateOnHover asChild>
+            <Button onClick={handleCopy} variant="default" className="w-full">
+              {copied ? (
+                <>
+                  <CheckCheck size={16} animate className="mr-2" />
+                  {t("actions.copied")}
+                </>
+              ) : (
+                <>
+                  <Clipboard size={16} className="mr-2" />
+                  {t("actions.copy")}
+                </>
+              )}
+            </Button>
+          </AnimateIcon>
         </TooltipTrigger>
         <TooltipContent>
           <p>{copied ? t("actions.copied") : t("actions.copy")}</p>

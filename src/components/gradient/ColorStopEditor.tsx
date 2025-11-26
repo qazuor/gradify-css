@@ -1,4 +1,6 @@
-import { Plus, Trash2 } from "lucide-react";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
+import { MessageSquareDiff } from "@/components/animate-ui/icons/message-square-diff";
+import { Trash2 } from "@/components/animate-ui/icons/trash-2";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
@@ -20,10 +22,12 @@ export function ColorStopEditor() {
     <div className="space-y-4">
       <div className="flex items-center justify-between gap-2">
         <Label className="shrink-0">{t("gradient.colorStops")}</Label>
-        <Button variant="outline" size="sm" onClick={addColorStop}>
-          <Plus className="h-4 w-4 sm:mr-1" />
-          <span className="hidden sm:inline">{t("gradient.addStop")}</span>
-        </Button>
+        <AnimateIcon animateOnHover asChild>
+          <Button variant="outline" size="sm" onClick={addColorStop}>
+            <MessageSquareDiff size={16} className="sm:mr-1" />
+            <span className="hidden sm:inline">{t("gradient.addStop")}</span>
+          </Button>
+        </AnimateIcon>
       </div>
 
       <div className="space-y-4">
@@ -53,15 +57,17 @@ export function ColorStopEditor() {
               <span className="text-muted-foreground w-9 shrink-0 text-right text-sm">
                 {stop.position}%
               </span>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => removeColorStop(stop.id)}
-                disabled={!canRemove}
-                className="h-8 w-8 shrink-0"
-              >
-                <Trash2 className="h-4 w-4" />
-              </Button>
+              <AnimateIcon animateOnHover asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => removeColorStop(stop.id)}
+                  disabled={!canRemove}
+                  className="h-8 w-8 shrink-0"
+                >
+                  <Trash2 size={16} />
+                </Button>
+              </AnimateIcon>
             </div>
           </div>
         ))}

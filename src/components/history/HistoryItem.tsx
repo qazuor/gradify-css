@@ -1,4 +1,6 @@
-import { Check, Trash2 } from "lucide-react";
+import { CheckCheck } from "@/components/animate-ui/icons/check-check";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
+import { Trash2 } from "@/components/animate-ui/icons/trash-2";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
@@ -27,14 +29,16 @@ export function HistoryItem({ item, onApply, onDelete }: HistoryItemProps) {
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button
-                variant="secondary"
-                size="icon"
-                className="h-8 w-8"
-                onClick={() => onApply(item)}
-              >
-                <Check className="h-4 w-4" />
-              </Button>
+              <AnimateIcon animateOnHover asChild>
+                <Button
+                  variant="secondary"
+                  size="icon"
+                  className="h-8 w-8"
+                  onClick={() => onApply(item)}
+                >
+                  <CheckCheck size={16} />
+                </Button>
+              </AnimateIcon>
             </TooltipTrigger>
             <TooltipContent>
               <p>{t("history.apply")}</p>
@@ -44,17 +48,19 @@ export function HistoryItem({ item, onApply, onDelete }: HistoryItemProps) {
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button
-                variant="destructive"
-                size="icon"
-                className="h-8 w-8"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onDelete(item.id);
-                }}
-              >
-                <Trash2 className="h-4 w-4" />
-              </Button>
+              <AnimateIcon animateOnHover asChild>
+                <Button
+                  variant="destructive"
+                  size="icon"
+                  className="h-8 w-8"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onDelete(item.id);
+                  }}
+                >
+                  <Trash2 size={16} />
+                </Button>
+              </AnimateIcon>
             </TooltipTrigger>
             <TooltipContent>
               <p>{t("history.delete")}</p>

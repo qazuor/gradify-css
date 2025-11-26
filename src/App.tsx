@@ -1,4 +1,7 @@
-import { History, Lightbulb, Palette } from "lucide-react";
+import { ClipboardList } from "@/components/animate-ui/icons/clipboard-list";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
+import { Lightbulb } from "@/components/animate-ui/icons/lightbulb";
+import { SlidersHorizontal } from "@/components/animate-ui/icons/sliders-horizontal";
 import { useTranslation } from "react-i18next";
 
 import { GradientControls } from "@/components/gradient/GradientControls";
@@ -23,18 +26,24 @@ function App() {
         className="w-full"
       >
         <TabsList className="mb-6 grid w-full grid-cols-3">
-          <TabsTrigger value="creator" className="gap-2">
-            <Palette className="h-4 w-4" />
-            <span className="hidden sm:inline">{t("tabs.creator")}</span>
-          </TabsTrigger>
-          <TabsTrigger value="history" className="gap-2">
-            <History className="h-4 w-4" />
-            <span className="hidden sm:inline">{t("tabs.history")}</span>
-          </TabsTrigger>
-          <TabsTrigger value="inspiration" className="gap-2">
-            <Lightbulb className="h-4 w-4" />
-            <span className="hidden sm:inline">{t("tabs.inspiration")}</span>
-          </TabsTrigger>
+          <AnimateIcon animateOnHover asChild>
+            <TabsTrigger value="creator" className="gap-2">
+              <SlidersHorizontal size={16} />
+              <span className="hidden sm:inline">{t("tabs.creator")}</span>
+            </TabsTrigger>
+          </AnimateIcon>
+          <AnimateIcon animateOnHover asChild>
+            <TabsTrigger value="history" className="gap-2">
+              <ClipboardList size={16} />
+              <span className="hidden sm:inline">{t("tabs.history")}</span>
+            </TabsTrigger>
+          </AnimateIcon>
+          <AnimateIcon animateOnHover asChild>
+            <TabsTrigger value="inspiration" className="gap-2">
+              <Lightbulb size={16} />
+              <span className="hidden sm:inline">{t("tabs.inspiration")}</span>
+            </TabsTrigger>
+          </AnimateIcon>
         </TabsList>
 
         <TabsContent value="creator">

@@ -1,4 +1,5 @@
-import { ExternalLink } from "lucide-react";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
+import { Link } from "@/components/animate-ui/icons/link";
 import { useTranslation } from "react-i18next";
 
 import { LanguageSelector } from "@/components/common/LanguageSelector";
@@ -18,15 +19,17 @@ export function Header() {
             <h1 className="text-xl font-bold">{t("app.title")}</h1>
           </div>
           <span className="text-muted-foreground hidden sm:inline">|</span>
-          <a
-            href={siteConfig.author.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary hidden items-center gap-1 text-sm transition-colors sm:flex"
-          >
-            by {siteConfig.author.name}
-            <ExternalLink className="h-3 w-3" />
-          </a>
+          <AnimateIcon animateOnHover asChild>
+            <a
+              href={siteConfig.author.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary hidden items-center gap-1 text-sm transition-colors sm:flex"
+            >
+              by {siteConfig.author.name}
+              <Link size={12} />
+            </a>
+          </AnimateIcon>
         </div>
         <div className="flex items-center gap-2">
           <LanguageSelector />

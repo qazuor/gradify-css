@@ -1,4 +1,6 @@
-import { Dices, RotateCcw } from "lucide-react";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
+import { LoaderPinwheel } from "@/components/animate-ui/icons/loader-pinwheel";
+import { RotateCcw } from "@/components/animate-ui/icons/rotate-ccw";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
@@ -23,14 +25,18 @@ export function GradientControls() {
         <div className="flex flex-wrap items-center justify-between gap-2">
           <CardTitle className="text-lg">{t("gradient.type")}</CardTitle>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm" onClick={randomize}>
-              <Dices className="h-4 w-4 sm:mr-1" />
-              <span className="hidden sm:inline">{t("actions.randomize")}</span>
-            </Button>
-            <Button variant="outline" size="sm" onClick={reset}>
-              <RotateCcw className="h-4 w-4 sm:mr-1" />
-              <span className="hidden sm:inline">{t("actions.reset")}</span>
-            </Button>
+            <AnimateIcon animateOnHover asChild>
+              <Button variant="outline" size="sm" onClick={randomize}>
+                <LoaderPinwheel size={16} className="sm:mr-1" />
+                <span className="hidden sm:inline">{t("actions.randomize")}</span>
+              </Button>
+            </AnimateIcon>
+            <AnimateIcon animateOnHover asChild>
+              <Button variant="outline" size="sm" onClick={reset}>
+                <RotateCcw size={16} className="sm:mr-1" />
+                <span className="hidden sm:inline">{t("actions.reset")}</span>
+              </Button>
+            </AnimateIcon>
           </div>
         </div>
       </CardHeader>
