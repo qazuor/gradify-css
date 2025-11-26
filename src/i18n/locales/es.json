@@ -1,0 +1,60 @@
+{
+  "app": {
+    "title": "Gradify CSS",
+    "description": "Generador de Gradientes CSS"
+  },
+  "tabs": {
+    "creator": "Creador",
+    "history": "Historial",
+    "inspiration": "Inspiracion"
+  },
+  "theme": {
+    "toggle": "Cambiar tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "language": {
+    "select": "Seleccionar idioma"
+  },
+  "gradient": {
+    "type": "Tipo de Gradiente",
+    "linear": "Lineal",
+    "radial": "Radial",
+    "conic": "Conico",
+    "angle": "Angulo",
+    "shape": "Forma",
+    "circle": "Circulo",
+    "ellipse": "Elipse",
+    "position": "Posicion",
+    "colorStops": "Paradas de Color",
+    "addStop": "Agregar Color",
+    "removeStop": "Eliminar",
+    "color": "Color",
+    "preview": "Vista Previa"
+  },
+  "actions": {
+    "copy": "Copiar CSS",
+    "copied": "Copiado!",
+    "reset": "Reiniciar",
+    "randomize": "Aleatorio"
+  },
+  "history": {
+    "title": "Historial",
+    "empty": "No hay gradientes guardados. Crea un gradiente y copia el CSS para guardarlo aqui.",
+    "apply": "Aplicar",
+    "delete": "Eliminar",
+    "clear": "Limpiar Todo"
+  },
+  "inspiration": {
+    "title": "Inspiracion",
+    "description": "Haz click en cualquier gradiente para usarlo en el Creador",
+    "sunset": "Atardecer",
+    "ocean": "Oceano",
+    "nature": "Naturaleza",
+    "neon": "Neon"
+  },
+  "css": {
+    "output": "Codigo CSS"
+  }
+}

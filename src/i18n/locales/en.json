@@ -1,0 +1,60 @@
+{
+  "app": {
+    "title": "Gradify CSS",
+    "description": "CSS Gradient Generator"
+  },
+  "tabs": {
+    "creator": "Creator",
+    "history": "History",
+    "inspiration": "Inspiration"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "select": "Select language"
+  },
+  "gradient": {
+    "type": "Gradient Type",
+    "linear": "Linear",
+    "radial": "Radial",
+    "conic": "Conic",
+    "angle": "Angle",
+    "shape": "Shape",
+    "circle": "Circle",
+    "ellipse": "Ellipse",
+    "position": "Position",
+    "colorStops": "Color Stops",
+    "addStop": "Add Color Stop",
+    "removeStop": "Remove",
+    "color": "Color",
+    "preview": "Preview"
+  },
+  "actions": {
+    "copy": "Copy CSS",
+    "copied": "Copied!",
+    "reset": "Reset",
+    "randomize": "Randomize"
+  },
+  "history": {
+    "title": "History",
+    "empty": "No gradients saved yet. Create a gradient and copy the CSS to save it here.",
+    "apply": "Apply",
+    "delete": "Delete",
+    "clear": "Clear All"
+  },
+  "inspiration": {
+    "title": "Inspiration",
+    "description": "Click on any gradient to use it in the Creator",
+    "sunset": "Sunset",
+    "ocean": "Ocean",
+    "nature": "Nature",
+    "neon": "Neon"
+  },
+  "css": {
+    "output": "CSS Output"
+  }
+}
