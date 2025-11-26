@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from "motion/react";
 
 import {
   getVariants,
-  useAnimateIconContext,
-  IconWrapper,
   type IconProps,
-} from '@/components/animate-ui/icons/icon';
+  IconWrapper,
+  useAnimateIconContext,
+} from "@/components/animate-ui/icons/icon";
 
 type CheckCheckProps = IconProps<keyof typeof animations>;
 
@@ -21,7 +21,7 @@ const animations = {
         scale: [1, 1.1, 1],
         transition: {
           duration: 0.8,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
     },
@@ -36,7 +36,7 @@ const animations = {
 
         transition: {
           duration: 0.6,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
     },
@@ -51,7 +51,7 @@ const animations = {
 
         transition: {
           duration: 0.6,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           delay: 0.2,
         },
       },

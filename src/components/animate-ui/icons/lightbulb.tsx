@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from "motion/react";
 
 import {
   getVariants,
-  useAnimateIconContext,
-  IconWrapper,
   type IconProps,
-} from '@/components/animate-ui/icons/icon';
+  IconWrapper,
+  useAnimateIconContext,
+} from "@/components/animate-ui/icons/icon";
 
 type LightbulbProps = IconProps<keyof typeof animations>;
 
@@ -16,24 +16,24 @@ const animations = {
     path1: {
       initial: {
         rotate: 0,
-        fill: 'transparent',
+        fill: "transparent",
       },
       animate: {
-        transformOrigin: 'bottom center',
-        fill: 'currentColor',
+        transformOrigin: "bottom center",
+        fill: "currentColor",
         rotate: [0, -20, 15, -7, 0],
         fillOpacity: [0, 1, 0, 1, 0],
         transition: {
           duration: 0.8,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           rotate: {
             duration: 0.8,
-            ease: 'easeInOut',
+            ease: "easeInOut",
             times: [0, 0.4, 0.6, 0.8, 1],
           },
           fillOpacity: {
             duration: 0.3,
-            ease: 'easeInOut',
+            ease: "easeInOut",
             times: [0, 0.4, 0.6, 0.8, 1],
             delay: 0.4,
           },
@@ -45,11 +45,11 @@ const animations = {
         rotate: 0,
       },
       animate: {
-        transformOrigin: 'bottom center',
+        transformOrigin: "bottom center",
         rotate: [0, 0, 10, -5, 0],
         transition: {
           duration: 0.8,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           times: [0, 0.4, 0.6, 0.8, 1],
         },
       },
@@ -83,18 +83,8 @@ function IconComponent({ size, ...props }: LightbulbProps) {
         initial="initial"
         animate={controls}
       />
-      <motion.path
-        d="M9 18h6"
-        variants={variants.path2}
-        initial="initial"
-        animate={controls}
-      />
-      <motion.path
-        d="M10 22h4"
-        variants={variants.path3}
-        initial="initial"
-        animate={controls}
-      />
+      <motion.path d="M9 18h6" variants={variants.path2} initial="initial" animate={controls} />
+      <motion.path d="M10 22h4" variants={variants.path3} initial="initial" animate={controls} />
     </motion.svg>
   );
 }

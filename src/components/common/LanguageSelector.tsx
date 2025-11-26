@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 import { Settings } from "@/components/animate-ui/icons/settings";
-import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 import {

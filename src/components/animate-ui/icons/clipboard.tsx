@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from "motion/react";
 
 import {
   getVariants,
-  useAnimateIconContext,
-  IconWrapper,
   type IconProps,
-} from '@/components/animate-ui/icons/icon';
+  IconWrapper,
+  useAnimateIconContext,
+} from "@/components/animate-ui/icons/icon";
 
 type ClipboardProps = IconProps<keyof typeof animations>;
 
@@ -27,12 +27,12 @@ const animations = {
         scale: [1.1, 1],
         transition: {
           duration: 0.6,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
     },
   } satisfies Record<string, Variants>,
-  'default-return': {
+  "default-return": {
     rect: {},
     path1: {},
     path2: {
@@ -49,7 +49,7 @@ const animations = {
         scale: [1.1, 1, 1, 1],
         transition: {
           duration: 1.8,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           times: [0, 0.3, 0.7, 1],
         },
       },

@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 import { Link } from "@/components/animate-ui/icons/link";
-import { useTranslation } from "react-i18next";
 
 import { LanguageSelector } from "@/components/common/LanguageSelector";
 import { ThemeToggle } from "@/components/common/ThemeToggle";

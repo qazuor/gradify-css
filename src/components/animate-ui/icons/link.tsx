@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from "motion/react";
 
 import {
   getVariants,
-  useAnimateIconContext,
-  IconWrapper,
   type IconProps,
-} from '@/components/animate-ui/icons/icon';
+  IconWrapper,
+  useAnimateIconContext,
+} from "@/components/animate-ui/icons/icon";
 
 type LinkProps = IconProps<keyof typeof animations>;
 
@@ -20,7 +20,7 @@ const animations = {
         pathLength: 1,
         transition: {
           duration: 0.4,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
       animate: {
@@ -29,7 +29,7 @@ const animations = {
         pathLength: 0.85,
         transition: {
           duration: 0.4,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
     },
@@ -40,7 +40,7 @@ const animations = {
         pathLength: 1,
         transition: {
           duration: 0.4,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
       animate: {
@@ -49,12 +49,12 @@ const animations = {
         pathLength: 0.85,
         transition: {
           duration: 0.4,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
     },
   } satisfies Record<string, Variants>,
-  'default-loop': {
+  "default-loop": {
     path1: {
       initial: {
         x: 0,
@@ -62,7 +62,7 @@ const animations = {
         pathLength: 1,
         transition: {
           duration: 0.4,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
       animate: {
@@ -71,7 +71,7 @@ const animations = {
         pathLength: [1, 0.85, 1],
         transition: {
           duration: 0.8,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
     },
@@ -82,7 +82,7 @@ const animations = {
         pathLength: 1,
         transition: {
           duration: 0.4,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
       animate: {
@@ -91,7 +91,7 @@ const animations = {
         pathLength: [1, 0.85, 1],
         transition: {
           duration: 0.8,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
     },
@@ -137,10 +137,4 @@ function Link(props: LinkProps) {
   return <IconWrapper icon={IconComponent} {...props} />;
 }
 
-export {
-  animations,
-  Link,
-  Link as LinkIcon,
-  type LinkProps,
-  type LinkProps as LinkIconProps,
-};
+export { animations, Link, Link as LinkIcon, type LinkProps, type LinkProps as LinkIconProps };

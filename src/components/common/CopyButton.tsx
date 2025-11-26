@@ -1,8 +1,8 @@
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { CheckCheck } from "@/components/animate-ui/icons/check-check";
 import { Clipboard } from "@/components/animate-ui/icons/clipboard";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";

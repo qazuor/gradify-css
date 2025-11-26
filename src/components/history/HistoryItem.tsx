@@ -1,7 +1,7 @@
+import { useTranslation } from "react-i18next";
 import { CheckCheck } from "@/components/animate-ui/icons/check-check";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 import { Trash2 } from "@/components/animate-ui/icons/trash-2";
-import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";

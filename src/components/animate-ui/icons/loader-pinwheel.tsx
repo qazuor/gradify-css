@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from "motion/react";
 
 import {
   getVariants,
-  useAnimateIconContext,
-  IconWrapper,
   type IconProps,
-} from '@/components/animate-ui/icons/icon';
+  IconWrapper,
+  useAnimateIconContext,
+} from "@/components/animate-ui/icons/icon";
 
 type LoaderPinwheelProps = IconProps<keyof typeof animations>;
 
@@ -21,9 +21,9 @@ const animations = {
         rotate: 360,
         transition: {
           duration: 1.5,
-          ease: 'linear',
+          ease: "linear",
           repeat: Infinity,
-          repeatType: 'loop',
+          repeatType: "loop",
         },
       },
     },

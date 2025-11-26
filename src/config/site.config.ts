@@ -1,13 +1,7 @@
 import { Palette } from "lucide-react";
 import type { ComponentType, SVGProps } from "react";
 
-import {
-  BuyMeACoffeeIcon,
-  FiverrIcon,
-  GithubIcon,
-  LinkedinIcon,
-  UpworkIcon,
-} from "@/icons";
+import { BuyMeACoffeeIcon, FiverrIcon, GithubIcon, LinkedinIcon, UpworkIcon } from "@/icons";
 
 /**
  * Site Configuration
@@ -98,7 +92,11 @@ export const siteConfig: SiteConfig = {
 
   freelanceLinks: [
     { name: "Fiverr", url: "https://www.fiverr.com/sellers/leandroasrilevi/", icon: FiverrIcon },
-    { name: "Upwork", url: "https://www.upwork.com/freelancers/~01881c38344e9431d7", icon: UpworkIcon },
+    {
+      name: "Upwork",
+      url: "https://www.upwork.com/freelancers/~01881c38344e9431d7",
+      icon: UpworkIcon,
+    },
   ],
 
   techStack: ["React", "TypeScript", "Tailwind", "shadcn/ui", "Zustand", "Vite"],

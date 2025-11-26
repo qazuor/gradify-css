@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from "motion/react";
 
 import {
   getVariants,
-  useAnimateIconContext,
-  IconWrapper,
   type IconProps,
-} from '@/components/animate-ui/icons/icon';
+  IconWrapper,
+  useAnimateIconContext,
+} from "@/components/animate-ui/icons/icon";
 
 type MessageSquareDiffProps = IconProps<keyof typeof animations>;
 
@@ -18,10 +18,10 @@ const animations = {
         rotate: 0,
       },
       animate: {
-        transformOrigin: 'bottom left',
+        transformOrigin: "bottom left",
         rotate: [0, 8, -8, 2, 0],
         transition: {
-          ease: 'easeInOut',
+          ease: "easeInOut",
           duration: 0.8,
           times: [0, 0.4, 0.6, 0.8, 1],
         },
@@ -35,7 +35,7 @@ const animations = {
       animate: {
         rotate: [0, 45, 0],
         transition: {
-          ease: 'easeInOut',
+          ease: "easeInOut",
           duration: 0.6,
         },
       },
@@ -47,7 +47,7 @@ const animations = {
       animate: {
         rotate: [0, 45, 0],
         transition: {
-          ease: 'easeInOut',
+          ease: "easeInOut",
           duration: 0.6,
           delay: 0.05,
         },
@@ -60,7 +60,7 @@ const animations = {
       animate: {
         y: [0, 1, -1, 0],
         transition: {
-          ease: 'easeInOut',
+          ease: "easeInOut",
           duration: 0.7,
         },
       },
@@ -94,24 +94,9 @@ function IconComponent({ size, ...props }: MessageSquareDiffProps) {
           initial="initial"
           animate={controls}
         />
-        <motion.path
-          d="M12 7v6"
-          variants={variants.path2}
-          initial="initial"
-          animate={controls}
-        />
-        <motion.path
-          d="M9 10h6"
-          variants={variants.path3}
-          initial="initial"
-          animate={controls}
-        />
-        <motion.path
-          d="M9 17h6"
-          variants={variants.path4}
-          initial="initial"
-          animate={controls}
-        />
+        <motion.path d="M12 7v6" variants={variants.path2} initial="initial" animate={controls} />
+        <motion.path d="M9 10h6" variants={variants.path3} initial="initial" animate={controls} />
+        <motion.path d="M9 17h6" variants={variants.path4} initial="initial" animate={controls} />
       </motion.g>
     </motion.svg>
   );

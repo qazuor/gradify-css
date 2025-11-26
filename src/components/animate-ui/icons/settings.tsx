@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from "motion/react";
 
 import {
   getVariants,
-  useAnimateIconContext,
-  IconWrapper,
   type IconProps,
-} from '@/components/animate-ui/icons/icon';
+  IconWrapper,
+  useAnimateIconContext,
+} from "@/components/animate-ui/icons/icon";
 
 type SettingsProps = IconProps<keyof typeof animations>;
 
@@ -21,7 +21,7 @@ const animations = {
         rotate: [0, 90, 180],
         transition: {
           duration: 1.25,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       },
     },
@@ -37,7 +37,7 @@ const animations = {
         rotate: 360,
         transition: {
           duration: 2,
-          ease: 'linear',
+          ease: "linear",
         },
       },
     },

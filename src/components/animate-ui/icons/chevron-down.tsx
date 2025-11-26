@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from "motion/react";
 
 import {
   getVariants,
-  useAnimateIconContext,
-  IconWrapper,
   type IconProps,
-} from '@/components/animate-ui/icons/icon';
+  IconWrapper,
+  useAnimateIconContext,
+} from "@/components/animate-ui/icons/icon";
 
 type ChevronDownProps = IconProps<keyof typeof animations>;
 
@@ -16,22 +16,22 @@ const animations = {
     path: {
       initial: {
         y: 0,
-        transition: { duration: 0.3, ease: 'easeInOut' },
+        transition: { duration: 0.3, ease: "easeInOut" },
       },
       animate: {
         y: 4,
-        transition: { duration: 0.3, ease: 'easeInOut' },
+        transition: { duration: 0.3, ease: "easeInOut" },
       },
     },
   } satisfies Record<string, Variants>,
-  'default-loop': {
+  "default-loop": {
     path: {
       initial: {
         y: 0,
       },
       animate: {
         y: [0, 4, 0],
-        transition: { duration: 0.6, ease: 'easeInOut' },
+        transition: { duration: 0.6, ease: "easeInOut" },
       },
     },
   } satisfies Record<string, Variants>,
@@ -56,12 +56,7 @@ function IconComponent({ size, ...props }: ChevronDownProps) {
       strokeLinejoin="round"
       {...props}
     >
-      <motion.path
-        d="m6 9 6 6 6-6"
-        variants={variants.path}
-        initial="initial"
-        animate={controls}
-      />
+      <motion.path d="m6 9 6 6 6-6" variants={variants.path} initial="initial" animate={controls} />
     </motion.svg>
   );
 }

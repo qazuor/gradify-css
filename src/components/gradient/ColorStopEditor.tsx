@@ -1,7 +1,7 @@
+import { useTranslation } from "react-i18next";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 import { MessageSquareDiff } from "@/components/animate-ui/icons/message-square-diff";
 import { Trash2 } from "@/components/animate-ui/icons/trash-2";
-import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

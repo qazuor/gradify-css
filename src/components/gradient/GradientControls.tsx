@@ -1,7 +1,7 @@
+import { useTranslation } from "react-i18next";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 import { LoaderPinwheel } from "@/components/animate-ui/icons/loader-pinwheel";
 import { RotateCcw } from "@/components/animate-ui/icons/rotate-ccw";
-import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

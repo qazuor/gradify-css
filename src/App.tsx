@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   Tabs,
   TabsContent,
@@ -9,7 +10,6 @@ import { ClipboardList } from "@/components/animate-ui/icons/clipboard-list";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 import { Lightbulb } from "@/components/animate-ui/icons/lightbulb";
 import { SlidersHorizontal } from "@/components/animate-ui/icons/sliders-horizontal";
-import { useTranslation } from "react-i18next";
 
 import { GradientControls } from "@/components/gradient/GradientControls";
 import { GradientPreview } from "@/components/gradient/GradientPreview";
