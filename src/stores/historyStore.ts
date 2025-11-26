@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
+import { siteConfig } from "@/config/site.config";
 import { generateId } from "@/lib/gradient-utils";
 import type { GradientConfig, HistoryItem } from "@/types/gradient.types";
 
@@ -45,7 +46,7 @@ export const useHistoryStore = create<HistoryStore>()(
       clearHistory: () => set({ items: [] }),
     }),
     {
-      name: "gradify-history",
+      name: siteConfig.storage.history,
     }
   )
 );

@@ -8,11 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-const languages = [
-  { code: "en", label: "English" },
-  { code: "es", label: "Espanol" },
-] as const;
+import { siteConfig } from "@/config/site.config";
 
 export function LanguageSelector() {
   const { i18n, t } = useTranslation();
@@ -26,13 +22,14 @@ export function LanguageSelector() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {languages.map((lang) => (
+        {siteConfig.languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => i18n.changeLanguage(lang.code)}
             className={i18n.language === lang.code ? "bg-accent" : ""}
           >
-            {lang.label}
+            <span className="mr-2">{lang.flag}</span>
+            {lang.name}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
