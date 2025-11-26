@@ -1,3 +1,10 @@
+import {
+  Tabs,
+  TabsContent,
+  TabsContents,
+  TabsList,
+  TabsTrigger,
+} from "@/components/animate-ui/components/animate/tabs";
 import { ClipboardList } from "@/components/animate-ui/icons/clipboard-list";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 import { Lightbulb } from "@/components/animate-ui/icons/lightbulb";
@@ -9,7 +16,6 @@ import { GradientPreview } from "@/components/gradient/GradientPreview";
 import { PresetsPanel } from "@/components/gradient/PresetsPanel";
 import { HistoryPanel } from "@/components/history/HistoryPanel";
 import { MainLayout } from "@/components/layout/MainLayout";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { TabValue } from "@/stores/uiStore";
 import { useUIStore } from "@/stores/uiStore";
 
@@ -25,7 +31,7 @@ function App() {
         onValueChange={(value) => setActiveTab(value as TabValue)}
         className="w-full"
       >
-        <TabsList className="mb-6 grid w-full grid-cols-3">
+        <TabsList className="mb-6 w-full grid grid-cols-3">
           <AnimateIcon animateOnHover asChild>
             <TabsTrigger value="creator" className="gap-2">
               <SlidersHorizontal size={16} />
@@ -46,24 +52,26 @@ function App() {
           </AnimateIcon>
         </TabsList>
 
-        <TabsContent value="creator">
-          <div className="grid gap-6 lg:grid-cols-2">
-            <div>
-              <GradientPreview />
+        <TabsContents>
+          <TabsContent value="creator">
+            <div className="grid gap-6 lg:grid-cols-2">
+              <div>
+                <GradientPreview />
+              </div>
+              <div>
+                <GradientControls />
+              </div>
             </div>
-            <div>
-              <GradientControls />
-            </div>
-          </div>
-        </TabsContent>
+          </TabsContent>
 
-        <TabsContent value="history">
-          <HistoryPanel />
-        </TabsContent>
+          <TabsContent value="history">
+            <HistoryPanel />
+          </TabsContent>
 
-        <TabsContent value="inspiration">
-          <PresetsPanel />
-        </TabsContent>
+          <TabsContent value="inspiration">
+            <PresetsPanel />
+          </TabsContent>
+        </TabsContents>
       </Tabs>
     </MainLayout>
   );
