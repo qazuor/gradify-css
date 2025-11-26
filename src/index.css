@@ -191,6 +191,44 @@
     0 16px 32px oklch(0.65 0.15 275 / 0.1);
 }
 
+/* Dynamic Accent - changes based on gradient */
+.dynamic-accent {
+  --primary: var(--dynamic-accent-light, oklch(0.45 0.2 275));
+  --ring: var(--dynamic-accent-light, oklch(0.45 0.2 275));
+}
+
+.dark .dynamic-accent {
+  --primary: var(--dynamic-accent-dark, oklch(0.65 0.2 275));
+  --ring: var(--dynamic-accent-dark, oklch(0.65 0.2 275));
+}
+
+/* Dynamic colored shadows */
+.shadow-dynamic-sm {
+  box-shadow:
+    0 1px 2px oklch(0.45 0.15 var(--dynamic-accent-h, 275) / 0.1),
+    0 2px 4px oklch(0.45 0.15 var(--dynamic-accent-h, 275) / 0.1);
+}
+
+.shadow-dynamic-md {
+  box-shadow:
+    0 2px 4px oklch(0.45 0.15 var(--dynamic-accent-h, 275) / 0.1),
+    0 4px 8px oklch(0.45 0.15 var(--dynamic-accent-h, 275) / 0.1),
+    0 8px 16px oklch(0.45 0.15 var(--dynamic-accent-h, 275) / 0.05);
+}
+
+.dark .shadow-dynamic-sm {
+  box-shadow:
+    0 1px 2px oklch(0.65 0.15 var(--dynamic-accent-h, 275) / 0.15),
+    0 2px 4px oklch(0.65 0.15 var(--dynamic-accent-h, 275) / 0.1);
+}
+
+.dark .shadow-dynamic-md {
+  box-shadow:
+    0 2px 4px oklch(0.65 0.15 var(--dynamic-accent-h, 275) / 0.15),
+    0 4px 8px oklch(0.65 0.15 var(--dynamic-accent-h, 275) / 0.1),
+    0 8px 16px oklch(0.65 0.15 var(--dynamic-accent-h, 275) / 0.08);
+}
+
 /* Gradient Header */
 .header-gradient {
   background: linear-gradient(

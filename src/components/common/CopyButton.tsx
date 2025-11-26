@@ -27,21 +27,23 @@ export function CopyButton({ text, onCopy }: CopyButtonProps) {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <AnimateIcon animateOnHover asChild>
-            <Button onClick={handleCopy} variant="default" className="w-full">
-              {copied ? (
-                <>
-                  <CheckCheck size={16} animate className="mr-2" />
-                  {t("actions.copied")}
-                </>
-              ) : (
-                <>
-                  <Clipboard size={16} className="mr-2" />
-                  {t("actions.copy")}
-                </>
-              )}
-            </Button>
-          </AnimateIcon>
+          <div className="dynamic-accent w-full">
+            <AnimateIcon animateOnHover asChild>
+              <Button onClick={handleCopy} variant="default" className="w-full shadow-dynamic-md">
+                {copied ? (
+                  <>
+                    <CheckCheck size={16} animate className="mr-2" />
+                    {t("actions.copied")}
+                  </>
+                ) : (
+                  <>
+                    <Clipboard size={16} className="mr-2" />
+                    {t("actions.copy")}
+                  </>
+                )}
+              </Button>
+            </AnimateIcon>
+          </div>
         </TooltipTrigger>
         <TooltipContent>
           <p>{copied ? t("actions.copied") : t("actions.copy")}</p>

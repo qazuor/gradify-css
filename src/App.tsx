@@ -16,6 +16,7 @@ import { GradientPreview } from "@/components/gradient/GradientPreview";
 import { PresetsPanel } from "@/components/gradient/PresetsPanel";
 import { HistoryPanel } from "@/components/history/HistoryPanel";
 import { MainLayout } from "@/components/layout/MainLayout";
+import { useDynamicAccent } from "@/hooks/useDynamicAccent";
 import type { TabValue } from "@/stores/uiStore";
 import { useUIStore } from "@/stores/uiStore";
 
@@ -23,6 +24,9 @@ function App() {
   const { t } = useTranslation();
   const activeTab = useUIStore((state) => state.activeTab);
   const setActiveTab = useUIStore((state) => state.setActiveTab);
+
+  // Apply dynamic accent color based on gradient
+  useDynamicAccent();
 
   return (
     <MainLayout>

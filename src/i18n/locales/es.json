@@ -26,6 +26,7 @@
   },
   "actions": {
     "copy": "Copiar CSS",
+    "copied": "¡Copiado!",
     "randomize": "Aleatorio"
   },
   "history": {
