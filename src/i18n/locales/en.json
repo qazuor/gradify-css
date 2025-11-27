@@ -46,5 +46,36 @@
   },
   "css": {
     "output": "CSS Output"
+  },
+  "help": {
+    "title": "How to Use Gradify CSS",
+    "button": "Help",
+    "sections": {
+      "gradientType": {
+        "title": "1. Choose Gradient Type",
+        "description": "Select between Linear, Radial, or Conic gradient types. Each type creates a different visual effect."
+      },
+      "adjustAngle": {
+        "title": "2. Adjust Angle/Position",
+        "description": "For linear gradients, adjust the angle. For radial and conic gradients, set the center position and shape."
+      },
+      "colorStops": {
+        "title": "3. Add Color Stops",
+        "description": "Click 'Add Color Stop' to add more colors. Drag the slider to adjust the position of each color. Click the color box to change the color."
+      },
+      "preview": {
+        "title": "4. Preview & Copy",
+        "description": "See the live preview of your gradient. When you're happy with the result, click 'Copy CSS' to copy the code to your clipboard."
+      },
+      "history": {
+        "title": "5. History",
+        "description": "Every time you copy a gradient, it's saved to your history. Access the History tab to reuse previous gradients."
+      },
+      "inspiration": {
+        "title": "6. Get Inspired",
+        "description": "Visit the Inspiration tab for pre-made gradient presets. Click any preset to load it in the Creator."
+      }
+    },
+    "tip": "Pro Tip: Use the randomize button to generate random gradients for inspiration!"
   }
 }
